@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15 feb 2024 13:32:30 by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="censo_europa" name="per.Votante" optimistic-lock="none" table="votante">
+        <id name="idVotante" type="int">
+            <column name="ID_VOTANTE"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="voto" type="string">
+            <column length="20" name="VOTO" not-null="true">
+                <comment>País al que ha votado</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

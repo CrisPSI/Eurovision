@@ -1,5 +1,5 @@
 package per;
-// Generated 23 ene 2024 22:14:48 by Hibernate Tools 5.4.33.Final
+// Generated 15 feb 2024 13:32:30 by Hibernate Tools 5.4.33.Final
 
 import java.util.List;
 import java.util.logging.Level;

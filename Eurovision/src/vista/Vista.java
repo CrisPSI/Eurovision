@@ -24,7 +24,6 @@ public class Vista extends JFrame {
 	public JLabel lblBandera1, lblBandera2, lblBandera3, lblBandera4, lblBandera5, lblBandera6, lblBandera7, lblBandera8, lblBandera9, lblBandera10;
 	public JLabel lblFotoCantante1, lblFotoCantante2, lblFotoCantante3;
 	public JButton btnInicio;
-
 	
 	/**
 	 * Launch the application.
@@ -43,12 +42,11 @@ public class Vista extends JFrame {
 			}
 		});
 	}
-	
-	
 
 	/**
 	 * Create the frame.
 	 */
+	
 	public Vista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 920, 680);
@@ -61,6 +59,22 @@ public class Vista extends JFrame {
 		resultadosPane = new JPanel();
 		resultadosPane.setBounds(0, 0, 906, 643);
 		resultadosPane.setVisible(false);
+		
+		inicioPane = new JPanel();
+		inicioPane.setBounds(0, 0, 906, 643);
+		mainPane.add(inicioPane);
+		inicioPane.setLayout(null);
+		inicioPane.setLayout(null);
+		
+		btnInicio = new JButton("Inicio");
+		btnInicio.setFont(new Font("Times New Roman", Font.PLAIN, 40));
+		btnInicio.setBounds(350, 193, 209, 86);
+		inicioPane.add(btnInicio);
+		
+		lblFondoInicio = new JLabel("");
+		lblFondoInicio.setIcon(new ImageIcon(Vista.class.getResource("/img/FondoInicio.jpg")));
+		lblFondoInicio.setBounds(0, 0, 906, 643);
+		inicioPane.add(lblFondoInicio);
 		mainPane.add(resultadosPane);
 		resultadosPane.setLayout(null);
 		
@@ -92,63 +106,9 @@ public class Vista extends JFrame {
 		lblBandera4.setBounds(39, 21, 45, 30);
 		cuartoPane.add(lblBandera4);
 		
-		quintoPane = new JPanel();
-		quintoPane.setLayout(null);
-		quintoPane.setBounds(40, 473, 250, 75);
-		resultadosPane.add(quintoPane);
-		
-		lblPosicion5 = new JLabel("5.");
-		lblPosicion5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPosicion5.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblPosicion5.setBounds(10, 10, 23, 53);
-		quintoPane.add(lblPosicion5);
-		
-		lblVotos5 = new JLabel("452");
-		lblVotos5.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		lblVotos5.setBounds(207, 9, 32, 56);
-		quintoPane.add(lblVotos5);
-		
-		lblNombreCantante5 = new JLabel("Nombre5");
-		lblNombreCantante5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNombreCantante5.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		lblNombreCantante5.setBounds(94, 10, 103, 54);
-		quintoPane.add(lblNombreCantante5);
-		
-		lblBandera5 = new JLabel("");
-		lblBandera5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBandera5.setBounds(39, 21, 45, 30);
-		quintoPane.add(lblBandera5);
-		
-		sextoPane = new JPanel();
-		sextoPane.setLayout(null);
-		sextoPane.setBounds(40, 558, 250, 75);
-		resultadosPane.add(sextoPane);
-		
-		lblPosicion6 = new JLabel("6.");
-		lblPosicion6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPosicion6.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		lblPosicion6.setBounds(10, 10, 23, 53);
-		sextoPane.add(lblPosicion6);
-		
-		lblVotos6 = new JLabel("452");
-		lblVotos6.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		lblVotos6.setBounds(207, 9, 32, 56);
-		sextoPane.add(lblVotos6);
-		
-		lblNombreCantante6 = new JLabel("Nombre6");
-		lblNombreCantante6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNombreCantante6.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		lblNombreCantante6.setBounds(94, 10, 103, 54);
-		sextoPane.add(lblNombreCantante6);
-		
-		lblBandera6 = new JLabel("");
-		lblBandera6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBandera6.setBounds(39, 21, 45, 30);
-		sextoPane.add(lblBandera6);
-		
 		septimoPane = new JPanel();
 		septimoPane.setLayout(null);
-		septimoPane.setBounds(328, 388, 250, 75);
+		septimoPane.setBounds(40, 473, 250, 75);
 		resultadosPane.add(septimoPane);
 		
 		lblPosicion7 = new JLabel("7.");
@@ -172,6 +132,33 @@ public class Vista extends JFrame {
 		lblBandera7.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBandera7.setBounds(39, 21, 45, 30);
 		septimoPane.add(lblBandera7);
+		
+		quintoPane = new JPanel();
+		quintoPane.setLayout(null);
+		quintoPane.setBounds(328, 388, 250, 75);
+		resultadosPane.add(quintoPane);
+		
+		lblPosicion5 = new JLabel("5.");
+		lblPosicion5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPosicion5.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblPosicion5.setBounds(10, 10, 23, 53);
+		quintoPane.add(lblPosicion5);
+		
+		lblVotos5 = new JLabel("452");
+		lblVotos5.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		lblVotos5.setBounds(207, 9, 32, 56);
+		quintoPane.add(lblVotos5);
+		
+		lblNombreCantante5 = new JLabel("Nombre5");
+		lblNombreCantante5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNombreCantante5.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		lblNombreCantante5.setBounds(94, 10, 103, 54);
+		quintoPane.add(lblNombreCantante5);
+		
+		lblBandera5 = new JLabel("");
+		lblBandera5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBandera5.setBounds(39, 21, 45, 30);
+		quintoPane.add(lblBandera5);
 		
 		octavoPane = new JPanel();
 		octavoPane.setLayout(null);
@@ -202,7 +189,7 @@ public class Vista extends JFrame {
 		
 		novenoPane = new JPanel();
 		novenoPane.setLayout(null);
-		novenoPane.setBounds(328, 558, 250, 75);
+		novenoPane.setBounds(619, 473, 250, 75);
 		resultadosPane.add(novenoPane);
 		
 		lblPosicion9 = new JLabel("9.");
@@ -229,7 +216,7 @@ public class Vista extends JFrame {
 		
 		decimoPane = new JPanel();
 		decimoPane.setLayout(null);
-		decimoPane.setBounds(619, 388, 250, 75);
+		decimoPane.setBounds(40, 558, 250, 75);
 		resultadosPane.add(decimoPane);
 		
 		lblPosicion10 = new JLabel("10.");
@@ -253,6 +240,33 @@ public class Vista extends JFrame {
 		lblBandera10.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBandera10.setBounds(39, 21, 45, 30);
 		decimoPane.add(lblBandera10);
+		
+		sextoPane = new JPanel();
+		sextoPane.setLayout(null);
+		sextoPane.setBounds(619, 388, 250, 75);
+		resultadosPane.add(sextoPane);
+		
+		lblPosicion6 = new JLabel("6.");
+		lblPosicion6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPosicion6.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblPosicion6.setBounds(10, 10, 23, 53);
+		sextoPane.add(lblPosicion6);
+		
+		lblVotos6 = new JLabel("452");
+		lblVotos6.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		lblVotos6.setBounds(207, 9, 32, 56);
+		sextoPane.add(lblVotos6);
+		
+		lblNombreCantante6 = new JLabel("Nombre6");
+		lblNombreCantante6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNombreCantante6.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		lblNombreCantante6.setBounds(94, 10, 103, 54);
+		sextoPane.add(lblNombreCantante6);
+		
+		lblBandera6 = new JLabel("");
+		lblBandera6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBandera6.setBounds(39, 21, 45, 30);
+		sextoPane.add(lblBandera6);
 		
 		lblPosicion3 = new JLabel("3");
 		lblPosicion3.setForeground(new Color(205, 133, 63));
@@ -300,7 +314,7 @@ public class Vista extends JFrame {
 		resultadosPane.add(lblVotos1);
 		
 		lblFotoCantante1 = new JLabel("");
-		lblFotoCantante1.setIcon(new ImageIcon(Vista.class.getResource("/img/CuadradoPrueba.png")));
+		lblFotoCantante1.setIcon(new ImageIcon(Vista.class.getResource("/img/Gianmarco.jpg")));
 		lblFotoCantante1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFotoCantante1.setBounds(366, 52, 180, 180);
 		resultadosPane.add(lblFotoCantante1);
@@ -359,21 +373,5 @@ public class Vista extends JFrame {
 		lblFondoResultados.setIcon(new ImageIcon(Vista.class.getResource("/img/FondoResultados.jpg")));
 		lblFondoResultados.setBounds(0, 0, 906, 643);
 		resultadosPane.add(lblFondoResultados);
-		
-		inicioPane = new JPanel();
-		inicioPane.setBounds(0, 0, 906, 643);
-		mainPane.add(inicioPane);
-		inicioPane.setLayout(null);
-		inicioPane.setLayout(null);
-		
-		btnInicio = new JButton("Inicio");
-		btnInicio.setFont(new Font("Times New Roman", Font.PLAIN, 40));
-		btnInicio.setBounds(350, 193, 209, 86);
-		inicioPane.add(btnInicio);
-		
-		lblFondoInicio = new JLabel("");
-		lblFondoInicio.setIcon(new ImageIcon(Vista.class.getResource("/img/FondoInicio.jpg")));
-		lblFondoInicio.setBounds(0, 0, 906, 643);
-		inicioPane.add(lblFondoInicio);
 	}
 }

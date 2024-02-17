@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 23 ene 2024 22:14:48 by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 feb 2024 13:32:30 by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="censo_europa" name="per.Cantantes" optimistic-lock="none" table="cantantes">
         <id name="pais" type="string">
@@ -14,6 +14,11 @@
         <property name="nombreCancion" type="string">
             <column length="100" name="NOMBRE_CANCION">
                 <comment>Nombre de la canción que presenta</comment>
+            </column>
+        </property>
+        <property name="numVotos" type="java.lang.Integer">
+            <column name="NUM_VOTOS">
+                <comment>Numero de votos que ha recibido el cantante</comment>
             </column>
         </property>
     </class>

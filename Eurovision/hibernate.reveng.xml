@@ -4,4 +4,5 @@
 <hibernate-reverse-engineering>
   <table-filter match-catalog="censo_europa" match-name="cantantes"/>
   <table-filter match-catalog="censo_europa" match-name="porcentajes_rangoedad"/>
+  <table-filter match-catalog="censo_europa" match-name="votante"/>
 </hibernate-reverse-engineering>
